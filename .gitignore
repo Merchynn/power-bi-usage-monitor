@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Configuração e credenciais
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+
+# Dados e artefatos
+output/
+saida_powerbi/
+*.db
+*.sqlite
+*.sqlite3
+*.csv
+*.json
+!sample_data/*.json
+*.pbix
+*.pbit
+*.Report/
+*.SemanticModel/
+
+# IDE / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
