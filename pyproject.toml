@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "power-bi-usage-monitor"
+version = "1.0.0"
+description = "Power BI usage, inventory and refresh monitoring pipeline"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{name = "Lucas Matheus de Lima Barreto"}]
+dependencies = [
+  "msal>=1.28,<2",
+  "requests>=2.31,<3",
+  "SQLAlchemy>=2.0,<3",
+  "psycopg2-binary>=2.9,<3",
+  "python-dotenv>=1.0,<2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9", "ruff>=0.5,<1"]
+
+[project.scripts]
+powerbi-monitor = "powerbi_usage_monitor.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
