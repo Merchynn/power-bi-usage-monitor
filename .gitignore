@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+
+# Secrets
+.env
+*.pem
+*.key
+*credentials*.json
+
+# Generated or corporate data
+output/
+saida_powerbi/
+*.db
+*.sqlite*
+*.csv
+*.parquet
+*.pbix
+*.pbit
+*.zip
+
+# Notebooks and IDE
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
