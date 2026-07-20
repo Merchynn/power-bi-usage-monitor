@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "power-bi-usage-monitor"
+version = "0.1.0"
+description = "Power BI governance and usage monitoring pipeline"
+requires-python = ">=3.11"
+dependencies = [
+  "msal>=1.28,<2",
+  "requests>=2.31,<3",
+  "SQLAlchemy>=2.0,<3",
+  "psycopg2-binary>=2.9,<3",
+  "python-dotenv>=1.0,<2"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+
+[project.scripts]
+powerbi-monitor = "powerbi_usage_monitor.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
